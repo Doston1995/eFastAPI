@@ -22,4 +22,7 @@ class Settings:
     ALGORITHM                   = "HS256"                         
     ACCESS_TOKEN_EXPIRE_MINUTES = 30 
     
+
+    URL                    :str = os.getenv("URL")
+    SERVICE_SECRET_KEY     :str = os.getenv("SERVICE_SECRET_KEY") 
 settings = Settings()

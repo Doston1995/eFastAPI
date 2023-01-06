@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class SignUpModel(BaseModel):
+class CreateUser(BaseModel):
     id         :Optional[str]
     username   :Optional[str]
     password   :Optional[str]
@@ -18,3 +18,13 @@ class SignUpModel(BaseModel):
                 'is_staff'   : False,
             }
         }
+
+class ShowUser(BaseModel):
+    id         :Optional[str]
+    username   :Optional[str]
+    office     :Optional[str]
+    token      :Optional[str]
+    is_staff   :Optional[bool]
+    
+    class Config:
+        orm_mode = True
